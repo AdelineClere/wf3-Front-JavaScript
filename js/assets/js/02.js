@@ -22,7 +22,7 @@ var Coordonnee = {
     age     :   28
 };
 
-console.clear;
+// console.clear;
 console.log(Coordonnee);
 console.log(Coordonnee['prenom']);
 console.log(Coordonnee.nom);
@@ -53,40 +53,51 @@ var listeDeNoms     = ["CHEMLA", "MATTEI", "VALETTE"];
 var listeDeTel      = [ 0624585265, 0645875495, 0645123298]
 
 var AnnuaireDesStagiaires = [ listeDePrenoms, listeDeNoms, listeDeTel ];
-document.write( AnnuaireDesStagiaires[0][1]) 
+document.write( AnnuaireDesStagiaires[0][0]) 
+document.write( ' ' );              
+document.write( AnnuaireDesStagiaires[1][0]);
+document.write( ' ' );              
+document.write( AnnuaireDesStagiaires[2][0]);
+document.write( ' ' );
+document.write( AnnuaireDesStagiaires [0][1]) 
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[1][1]);
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[2][1]);
 document.write( ' ' );
-document.write( AnnuaireDesStagiaires [0][2]) 
+document.write( AnnuaireDesStagiaires[0][2]);
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[1][2]);
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[2][2]);
-document.write( ' ' );
-document.write( AnnuaireDesStagiaires[0][3]);
-document.write( ' ' );              
-document.write( AnnuaireDesStagiaires[1][3]);
-document.write( ' ' );              
-document.write( AnnuaireDesStagiaires[2][3]);
 
+// console.clear;
 
-// Meilleure méthode
+// Meilleure méthode :
+
 var AnnuaireDesStagiaires = [
-    { prenom : "Hugo",      nom : "LIEGEARD",    tel : "07 83 97 15 15" },
-    { prenom : "Adeline",   nom : "CLERE",       tel : "07 83 97 15 15" },
-    { prenom : "John",      nom : "GARCIA",      tel : "07 83 97 15 15" },
+    { prenom : "Hugo",      nom : "LIEGEARD",   tel: "0783 97 15 15" },
+    { prenom : "Adeline",   nom : "CLERE",      tel: "XXXX XX XX XX" },
+    { prenom : "John",      nom : "GARCIA",     tel: "XXXX XX XX XX" },
 ];
+
+/**
+ * Le fait d'avoir des objets dans un tableau indexé ; nous avons
+ * mis en place le format JSON
+ */
 
 console.log(AnnuaireDesStagiaires);
 console.log(AnnuaireDesStagiaires[0].prenom);
-console.log(AnnuaireDesStagiaires[1].prenom);
+console.log(AnnuaireDesStagiaires[0].nom);
+console.log(AnnuaireDesStagiaires[0].tel);
 
-/**
-* Le fait d'avoir des objets dans 1 tableau indexé ; nous avons
-* mis en place le format JSON 
-*/
+console.log(AnnuaireDesStagiaires[1].prenom);
+console.log(AnnuaireDesStagiaires[1].nom);
+console.log(AnnuaireDesStagiaires[1].tel);
+
+console.log(AnnuaireDesStagiaires[2].prenom);
+console.log(AnnuaireDesStagiaires[2].nom);
+console.log(AnnuaireDesStagiaires[2].tel);
 
 /*--------------------------------------------
 |              AJOUTER UN ELEMENT
