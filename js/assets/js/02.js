@@ -22,7 +22,6 @@ var Coordonnee = {
     age     :   28
 };
 
-// console.clear;
 console.log(Coordonnee);
 console.log(Coordonnee['prenom']);
 console.log(Coordonnee.nom);
@@ -35,7 +34,7 @@ var listeDeNoms     = ["LIEGEARD", "NOUEL", "SOUAKI"];
 var Annuaire = [ listeDePrenoms, listeDeNoms ];
 
 //  -- Afficher un Nom et un Prenom sur ma page html
-document.write( Annuaire[0][1] )    // 0=annuaire en position 0 + Rodrigue en 1 
+document.write( Annuaire[0][1] )    // 0 = annuaire en position 0 + Rodrigue en 1 
 document.write( ' ' );              // pour faire 1 esp.
 document.write( Annuaire[1][1] );
 
@@ -53,13 +52,13 @@ var listeDeNoms     = ["CHEMLA", "MATTEI", "VALETTE"];
 var listeDeTel      = [ 0624585265, 0645875495, 0645123298]
 
 var AnnuaireDesStagiaires = [ listeDePrenoms, listeDeNoms, listeDeTel ];
-document.write( AnnuaireDesStagiaires[0][0]) 
+document.write( AnnuaireDesStagiaires[0][0]); 
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[1][0]);
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[2][0]);
 document.write( ' ' );
-document.write( AnnuaireDesStagiaires [0][1]) 
+document.write( AnnuaireDesStagiaires[0][1]) 
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[1][1]);
 document.write( ' ' );              
@@ -71,7 +70,7 @@ document.write( AnnuaireDesStagiaires[1][2]);
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[2][2]);
 
-// console.clear;
+
 
 // Meilleure méthode :
 
@@ -107,7 +106,7 @@ var Couleurs = ['Rouge', 'Jaune', 'Vert'];
 
 //  -- Si je souhaite ajouter un élément dans mon tableau
 //  -- Je fais appel à la fonction push() qui me renvoi le nb d'éléments.
-console.clear();
+
 console.log(Couleurs);
 var nombreElementsDeMonTableau = Couleurs.push('Orange'); // Pas obligé de mettre la var
 console.log(Couleurs);
@@ -120,11 +119,18 @@ en début de tableau
 |       RECUPERER ET SORTIR LE DERNIER ELEMENT
 ---------------------------------------------*/
 
-//  La fonction pop() me permet de supprimer un ou plusieurs éléments de montableau et d'en récupérer la valeur. Je peux accessoirement récupérer cette valeur dans une variable.
+/* La fonction pop() me permet de supprimer un ou plusieurs éléments de mon tableau 
+et d'en récupérer la valeur. Je peux accessoirement récupérer cette valeur dans une variable. */
 
 var monDernierElement = Couleurs.pop();
 console.log(Couleurs);
 console.log(monDernierElement);
 
-//  -- La même chose est possible avec le 1er élémenty en utilisant la fonction shift();
+//  -- La même chose est possible avec le 1er élément en utilisant la fonction shift();
 //  -- NB : La fonction splice() vous permet de faire sortir un ou plusiseurs élément sde votre tableau
+
+var monPremierElement = Couleurs.shift();
+console.log(Couleurs);
+console.log(monPremierElement);
+
+// console.clear;
