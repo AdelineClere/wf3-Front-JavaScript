@@ -2,14 +2,14 @@
             LA CONCATENATION
 ---------------------------------------*/
 
-var DebutDePhrase        = "Aujourdh'ui ";
+var DebutDePhrase        = "Aujourd'hui ";
 var DateDuJour           = new Date();
 var SuiteDePhrase        = ", sont présents : ";
 var NombreDeStagiaire   = 12;
 var FinDePhrase          = " stagiaires.<br>";
 
 /**
- * Nous osuhaitons maintenant, grâce à la concaténation, afficher
+ * Nous souhaitons maintenant, grâce à la concaténation, afficher
  * tout ce petit monde en 1 seul morceau.
  */
 

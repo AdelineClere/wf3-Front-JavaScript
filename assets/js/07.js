@@ -28,7 +28,7 @@ function Hello() {
     console.log(typeof age);
 
     // 2c. Déduire l'année de naissance et l'afficher dans une alerte
-    alert('AMAZING ! So were born in ' + ( anneeActuelle - age )  + " !")
+    alert('AMAZING ! So you are born in ' + ( anneeActuelle - age )  + " !")
 
     // 2d. Affiche tout ça dans la page (Récapitulatif)
     document.write("Hello " + prenom + " it's AMAZING ! you're " + age + " years old!");

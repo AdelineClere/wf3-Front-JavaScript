@@ -22,7 +22,7 @@ var Coordonnee = {
     age     :   28
 };
 
-console.clear;
+// console.clear;
 console.log(Coordonnee);
 console.log(Coordonnee['prenom']);
 console.log(Coordonnee.nom);
@@ -79,14 +79,24 @@ var AnnuaireDesStagiaires = [
     { prenom : "John",      nom : "GARCIA",      tel : "07 83 97 15 15" },
 ];
 
+/**
+ * Le fait d'avoir des objets dans un tableau indexé ; nous avons
+ * mis en place le format JSON
+ */
+
 console.log(AnnuaireDesStagiaires);
 console.log(AnnuaireDesStagiaires[0].prenom);
-console.log(AnnuaireDesStagiaires[1].prenom);
+console.log(AnnuaireDesStagiaires[0].nom);
+console.log(AnnuaireDesStagiaires[0].tel);
 
-/**
-* Le fait d'avoir des objets dans 1 tableau indexé ; nous avons
-* mis en place le format JSON 
-*/
+console.log(AnnuaireDesStagiaires[1].prenom);
+console.log(AnnuaireDesStagiaires[1].nom);
+console.log(AnnuaireDesStagiaires[1].tel);
+
+console.log(AnnuaireDesStagiaires[2].prenom);
+console.log(AnnuaireDesStagiaires[2].nom);
+console.log(AnnuaireDesStagiaires[2].tel);
+
 
 /*--------------------------------------------
 |              AJOUTER UN ELEMENT
@@ -96,7 +106,7 @@ var Couleurs = ['Rouge', 'Jaune', 'Vert'];
 
 //  -- Si je souhaite ajouter un élément dans mon tableau
 //  -- Je fais appel à la fonction push() qui me renvoi le nb d'éléments.
-console.clear();
+// console.clear();
 console.log(Couleurs);
 var nombreElementsDeMonTableau = Couleurs.push('Orange'); // Pas obligé de mettre la var
 console.log(Couleurs);
@@ -109,7 +119,8 @@ en début de tableau
 |       RECUPERER ET SORTIR LE DERNIER ELEMENT
 ---------------------------------------------*/
 
-//  La fonction pop() me permet de supprimer un ou plusieurs éléments de montableau et d'en récupérer la valeur. Je peux accessoirement récupérer cette valeur dans une variable.
+//  La fonction pop() me permet de supprimer un ou plusieurs éléments de montableau 
+// et d'en récupérer la valeur. Je peux accessoirement récupérer cette valeur dans une variable.
 
 var monDernierElement = Couleurs.pop();
 console.log(Couleurs);

@@ -1,158 +1,85 @@
-/*
- I. Créer un Tableau 3D "PremierTrimestre" contenant la moyenne d'un étudiant pour plusieurs matières.
+/* --
+    CONSIGNE : A partir du tableau fourni, vous devez mettre en place un système d'authentification. 
+    Après avoir demandé à votre utilisateur son EMAIL et MOT DE PASSE, et après avoir vérifié ses informations, 
+    vous lui souhaiterez la bienvenue avec son nom et prénom (document.write);
+            
+    En cas d'échec, vous afficherez une ALERT pour l'informer de l'erreur.  
+-- */
 
-    Nous auront donc pour un étudiant, sa moyenne à plusieurs matières.
-    
-    Par exemple : Hugo LIEGEARD : [ Francais : 12, Math : 19, Physique 4], ... etc
-    
-    **** Vous allez créez au minimum 5 étudiants ****
-
-II. Afficher sur la page (à l'aide de document.write) pour chaque étudiant, la liste (ul et li) 
-de sa moyenne à chaque matière, puis sa moyenne générale. 
-*/
-
-var PremierTrimestre = [
-    {
-        prenom  : "Hugo",
-        nom     : "LIEGEARD",
-        moyenne : {
-            francais : 4,
-            math     : 6,
-            physique : 18
-        }
-    },
-    {
-        prenom  : "Maxime",
-        nom     : "JOYES",
-        moyenne : {
-            francais : 4,
-            math     : 5,
-            physique : 12,
-            svt      : 15
-        }
-    },
-    {
-        prenom  : "John",
-        nom     : "GARCIA",
-        moyenne : {
-            francais : 4,
-            math     : 13,
-            physique : 12,
-            espagnol : 19
-        }
-    },
-    {
-        prenom  : "Hana",
-        nom     : "MATTEI",
-        moyenne : {
-            francais : 14,
-            math     : 13,
-            physique : 13,
-            anglais  : 16
-        }
-    }
+var BaseDeDonnees = [
+    {'prenom':'Hugo','nom':'LIEGEARD','email':'wf3@hl-media.fr','mdp':'wf3'},
+    {'prenom':'Rodrigue','nom':'NOUEL','email':'rodrigue@hl-media.fr','mdp':'wf3'},
+    {'prenom':'Nathanael','nom':'DORDONNE','email':'nathanael.d@hl-media.fr','mdp':'wf3'}
 ];
 
-// -- Les Flemards.js
+
+// -- LesFlemards.js
 function l(e) {
     console.log(e);
 }
-function w(e) {
-    document.write(e);
+function w(f) {
+    document.write(f);
 }
 
-// -- Je souhaite afficher la liste des etudiants (et comme c'est 1 tableau on fait une boucle)
-w('<ol>')
-for(let i = 0 ; i < PremierTrimestre.length ; i++) {
+// -- Déclaration de Variable
+// -- EstCeQueLeMailEstDansLeTableau = faux;
+var isEmailInArray = false;
 
-    // -- On récupère l'Objet Etudiant de l'Itération (= boucle)
-    let Etudiant = PremierTrimestre[i];
-    // l(Etudiant)
+// -- 1. Demander à l'utilisateur son email
+var email   = prompt('Bonjour, Quel est votre email ?','<Saisissez votre email>');
+var mdp     = prompt('votre mot de passe ?','<Saisissez votre mot de passe>');
 
-    var NombreDeMatiere = 0, SommeDesNotes = 0; // Dans la boucle for pour remettre à 0 à chaq etudiant suivant
+// -- 2. Parcourir l'ensemble des données de mon tableau
+for(let i = 0 ; i < BaseDeDonnees.length ; i++) {
 
-        w('<li>');
-            w(Etudiant.prenom + ' ' + Etudiant.nom);    // -- On fait une boucle des moyennes de chaque étudiant
-            w('<ul>');
-                for(let matiere in Etudiant.moyenne) { // -- On déclare matière ici et sa boucle à parcourir
-                    // l(matière);
+    if(email === BaseDeDonnees[i].email && mdp === BaseDeDonnees[i].mdp ) {
+        // -- J'ai trouvé une correspondance dans ma BDD
+        isEmailInArray = true;
+        w('Bonjour ' + BaseDeDonnees[i].prenom + ' !');
 
-                    NombreDeMatiere++; // --> liste chaque matière à chaque tour
-                    SommeDesNotes += Etudiant.moyenne[matiere]; // 
+        // -- Je stop la boucle for, j'ai trouvé ce que je cherche...
+        break;
 
-                    w('<li>');
-                        w(matiere + ' : ' + Etudiant.moyenne[matiere]);
-                    w('</li>');
+    }
 
-                } // -- Fin de la boucle matière
-
-                w('<li>');
-                    w('<strong>Moyenne Générale : </strong>' + ( SommeDesNotes / NombreDeMatiere).toFixed(2) );
-                w('<li>');
-
-            w('</ul>');
-        w('</li>');
-}
-w('</ol>');
-
-
-
-
-
-
-/* Me
-console.log(PremierTrimestre);
-
-var moyenneGénérale = parsInt(moyenne);
-totalNotes = français + math + physique + espagnol + anglais + svt;
-console.log(totalNotes);
-moyenneGénérale = totalNotes / moyenne;
-
-var i = 0
-while(i < moyenne.lenght) {
-    console.log(moyenne[i]);
 }
 
-console.log(PremierTrimestre[0].prenom, PremierTrimestre[0].nom),
-console.log(PremierTrimestre[0].moyenne),
-console.log(moyenneGénérale),
-console.log(PremierTrimestre[1].prenom, PremierTrimestre[1].nom),
-console.log(PremierTrimestre[0].moyenne),
-console.log(PremierTrimestre[2].prenom, PremierTrimestre[2].nom),
-console.log(PremierTrimestre[0].moyenne),
-console.log(PremierTrimestre[3].prenom, PremierTrimestre[3].nom),
-console.log(PremierTrimestre[0].moyenne)
-*/
+if(!isEmailInArray) {
+    alert('ATTENTION, Email / Mot de Passe incorrect !');
+}
+
+
 
 
 /*
-document.write ( 
-    <ol>
-    <li>PremierTrimestre[0].prenom, PremierTrimestre[0].nom</li>,
-    <li>PremierTrimestre[1].prenom, PremierTrimestre[1].nom</li>,
-    <li>PremierTrimestre[2].prenom, PremierTrimestre[2].nom</li>,
-    <li>PremierTrimestre[3].prenom, PremierTrimestre[3].nom</li>,
-    <ol> 
-    );
-  */
+
+// Je demande à l'utilisateur ses prénom nom email mdp
+var prenomUser = prompt("Bonjour, Quel est votre prenom ?","<Saisissez votre prenom>");
+var nomUser = prompt("Bonjour, Quel est votre nom ?","<Saisissez votre nom>");
+var emailUser = prompt("Bonjour, Quel est votre email ?","<Saisissez votre email>");
+var mdpUser = prompt("Votre mot de passe ?","<Saisissez votre mot de passe>");
 
 
+// Je fais une boucle pour lire tous les users
+for(let i = 0 ; i < BaseDeDonnees.length ; i++) {
+    let User = BaseDeDonnees[i];     // -- On récupère l'Objet User de l'Itération (= boucle)
 
 
-/* 
-var Etudiants = [
-   { prenom : "Carole",    nom : "Martin",     Français : "12",    Math : "13",    Physique : "15",   Economie : "16",   Anglais : "13", Espagnol :"11" },
-    { prenom : "Eric",      nom : "Durand",     Français : "14",    Math : "13",    Economie : "16",   Anglais : "Espagnol" },
-    { prenom : "Julien",    nom : "Tardi",      Français : "16",    Math : "13",    Physique : "15",   Economie : "16",   Anglais : "13" },
-    { prenom : "Alix",      nom : "Beaulieu",   Français : "10",    Math : "13",    Physique : "15",   Economie : "16",   Espagnol :"11" },
-    { prenom : "Margot",    nom : "Leman",      Français : "11",    Math : "13",    Physique : "15",   Anglais : "13", Espagnol :"11" },
-]
-
-var Matières = ["Français", "Math", "Physique", "Economie", "Anglais", "Espagnol"]
-
-var moyennesEtudiants = [
-    { prenom    :
-        nom     :
+    // Je crée une fonction pour vérifier les coord User
+    function authentificationUser(prenomUser, nomUser, emailUser, mdpUser) {
+        if(prenomUser === User.prenom && nomUser === User.nom && emailUser === User.email && mdpUser === User.mdp) {
+            return true;
+        } 
+        else {
+            return false;
+        }
     }
-]
+    // Je publie ma reponse
+    if(authentificationUser(prenomUser,nomUser,emailUser,mdpUser)) {
+        alert('Bienvenue ' + prenomUser);
+    } 
+    else {
+    alert('ATTENTION, authentification incorrecte.');
+    }
+}
 */

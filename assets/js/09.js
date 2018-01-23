@@ -1,117 +1,59 @@
-/* ------------------------------------------------------------------------
-|               LES OPERATEURS DE COMPARAISON
-|-------------------------------------------------------------------------
-|
-|   L'opérateur de comparaison " == " signifie : Egal à.
-|   Il permet de vérifier que 2 variables sont identiques.
-|   
-|   L'opérateur de comparaison " === " signifie : Strictement égal à. 
-|   Il va comparzere la valeur et le type (2 string ou 2  nb ac même valeur)
-|
-|   L'opérateur de comparaison " != " :Différent de.
-|   L'opérateur de comparaison " !== " : Strictement différent de.
-|
--------------------------------------------------------------------------------*/
+// ----------------------------------------
+// -- LA BOUCLE FOR
+// ----------------------------------------
 
-
-/* -------------------------------
-            EXERCICE :
-J'arrive sur un Espace Sécurisé au moyen 
-d'un email et d'un mot de passe.
-
-Je doit saisir mon email et mon mot de passe afin d'être authentifié sur le site.
-
-En cas d'échec une alert m'informe du problème.
-Si tous se passe bien, un message de bienvenue m'accueil.
-
-        Rq = JAMAIS dire si l'erreur est dans l'email ou mdp !!!
------------------------------------------------------------------------------- */
-
-// -- BASE DE DONNEES
-var email, mdp;
-
-email = "wf3@hl-media.fr";
-mdp  = "wf3";
-
-
-
-// // -- 1. Demander à l'utilisateur son adresse email
-// var emailUser = prompt("Bonjour, Quel est votre email ?","<Saisissez votre email>");
-
-// // -- 2. Je vérifie si l'email saisie (emailUser) correspond avec la BDD (email)
-// if(emailUser === email) {
-//     // -- 2a. Tous est ok, je continue la vérification avec le mot de passe...
-
-//     // -- 2a1. On demande a l'utilisateur son mot de passe
-//     var mdpUser = prompt("votre mot de passe ?","<Saisissez votre mot de passe>");
-
-//     // -- 2a2. Vérification du mot de passe
-//     if(mdpUser === mdp) {
-//         alert('Bienvenue !');
-//     } else {
-//         alert("ATTENTION, nous n'avons pas reconnu votre mot de passe.");
-//     }
-
-// } else {
-//     // -- 2b. Les emails ne correspondent pas...
-//     alert("ATTENTION, nous n'avons pas reconnu votre adresse email.");
-// }
-
-// -- Exemple avec les Fonctions
-
-function monUtilisateurEstCorrect(emailUser, mdpUser) {
-    if(emailUser === email && mdpUser === mdp) {
-        return true;
-    } else {
-        return false;
-    }
+for(let i = 0 ; i <= 10 ; i++) {
+    document.write('<p>Instruction executée : <strong>' + i + '</strong></p>');
 }
 
-var emailUser = prompt("Bonjour, Quel est votre email ?","<Saisissez votre email>");
-var mdpUser = prompt("votre mot de passe ?","<Saisissez votre mot de passe>");
+document.write('<hr>');
 
-if(monUtilisateurEstCorrect(emailUser,mdpUser)) {
-    alert('Bienvenue ' + emailUser);
-} else {
-   alert('ATTENTION, email/mot de passe incorrect.');
+
+// ----------------------------------------
+// -- LA BOUCLE WHILE
+// ----------------------------------------
+
+var j = 1;
+while(j <= 10) {
+    document.write('<p>Instruction executée : <strong>' + j + '</strong></p>')
+
+    // -- ATTENTION A NE PAS OUBLIER L'INCREMENTATION !
+    j++; 
+}
+
+/* ----------------------------------------
+|               EXERCICE
+|----------------------------------------*/
+
+// -- Supposons que nous avons le tableau suivant :
+var Prenoms = ['Jean', 'Marc', 'Matthieu', 'Luc', 'Pierre', 'Paul', 'Jacques', 'Hugo'];
+
+/** 
+* Grâce à une boucle for affichez la liste des prénoms
+* du tableau ci-dessus dans la console, ou sur votre pg.
+*/
+
+console.log(Prenoms);
+for(let i = 0 ; i < Prenoms.length ; i++) {
+    console.log(Prenoms[i]);
+}
+console.log('------');
+
+var j = 0;
+while(j < Prenoms.lenght) {
+    console.log(Prenoms[j]);
+    j++;
 }
 
 
-/* ------------------------------------------------------------------
-|               LES OPERATEURS LOGIQUES
-|--------------------------------------------------------------------
-|
-|              L'opérateur  ET : && ou AND 
-|
-|   Si la comparaison email user et email correspond, ET 
-|   la combinaison mdpuser et mdp correspond.
-|
-|   --> Dans cette condition, les 2 doivent OBLIGATOIREMENT
-|   correspondrent pour être validée
-|   Ex. if(emailUser == email && mdpUser == mdp) {....}
-|
---------------------------------------------------------------------
-|
-|              L'opérateur  OU : || ou OR
-| 
-|   Si la combinaison emailUser et email correspond ET/OU 
-|   la combinaison mdpUser et mdp correspond.
+// -----------------------------------------
+// -- LA BOUCLE ForEach
+// -- ATTENTION A LA PERFORMANCE !! (+ long)
+// -----------------------------------------
 
-|   --> Dans cette condition, au moins l'une des 2 doit OBLIGATOIREMENT
-|   correspondre pour être validée.
-|   Ex. if(emailUser == email || mdpUser == mdp) {....}
-|
---------------------------------------------------------------------
-|
-|              L'opérateur  " ! " ou encore NOT
-| 
-|   L'opérateur "!" signifie LE CONTRAIRE DE... OU NOT
-|Ex:
-|   var monUtilisateurEstApprouve = true;
-|   if(!monUtilisateurEstApprouve) {....}
-|   --> Mon utilisateur n'est pas approuvé.
-|
-|   Reviens à écrire :
-|   if(monUtilisateurEstApprouve = false) {....}
-|
----------------------------------------------------------------------*/
+Prenoms.forEach(affichePrenom); // affichePrenom = c'est une fonction un call-back
+
+function affichePrenom(prenom, index) { // La fonction ForEach passe la valeur (prenom) et l'index
+    console.log(prenom);
+}
+

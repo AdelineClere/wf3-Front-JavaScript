@@ -87,7 +87,7 @@ const HOST = "localhost";
 const USER = "root";
 const PASSWORD = "mysql";
 
-//  -- Je en peux pas faire cela :
+//  -- Je ne peux pas faire cela :
 // USER = "Hugo";
 // Uncaught TypeError: Assignment to constant variable.
 
