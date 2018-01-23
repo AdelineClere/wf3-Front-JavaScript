@@ -53,13 +53,13 @@ var listeDeNoms     = ["CHEMLA", "MATTEI", "VALETTE"];
 var listeDeTel      = [ 0624585265, 0645875495, 0645123298]
 
 var AnnuaireDesStagiaires = [ listeDePrenoms, listeDeNoms, listeDeTel ];
-document.write( AnnuaireDesStagiaires[0][0]) 
+document.write( AnnuaireDesStagiaires[0][0]); 
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[1][0]);
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[2][0]);
 document.write( ' ' );
-document.write( AnnuaireDesStagiaires [0][1]) 
+document.write( AnnuaireDesStagiaires [0][1]); 
 document.write( ' ' );              
 document.write( AnnuaireDesStagiaires[1][1]);
 document.write( ' ' );              
