@@ -65,7 +65,7 @@ function w(e) {
 w('<ol>')
 for(let i = 0 ; i < PremierTrimestre.length ; i++) {
 
-    // -- On récupère l'Objet Etudiant de l'Itération (= boucle)
+    // -- On récupère l'Objet ⚠️  Etudiant de l'Itération (= boucle) 
     let Etudiant = PremierTrimestre[i];
     // l(Etudiant)
 
@@ -87,8 +87,7 @@ for(let i = 0 ; i < PremierTrimestre.length ; i++) {
                 } // -- Fin de la boucle matière
 
                 w('<li>');
-                    w('<strong>Moyenne Générale : </strong>' 
-                    + ( SommeDesNotes / NombreDeMatiere).toFixed(2) );
+                    w('<strong>Moyenne Générale : </strong>' + ( SommeDesNotes / NombreDeMatiere).toFixed(2) );
                 w('</li>');
 
             w('</ul>');

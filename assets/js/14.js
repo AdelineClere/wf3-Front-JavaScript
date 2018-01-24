@@ -7,27 +7,27 @@
     OBJECTIF : être en mesure de capturer ces événements afin 
     d'exécuter une fonction.
 
-    Les Evénements : MOUSE (souris)
+    Les Evénements : MOUSE  ⚠️ (souris) 
 
         click       : au clic sur un élément
         mouseenter  : la souris passe au dessus de la zone d'un élément
         mouseleave  : la souris sors de cette zone
 
-    Les Evénements KEYBOARD (clavier)
+    Les Evénements KEYBOARD  ⚠️  (clavier)
 
         keydown     : une touche du clavier est enfoncée ;
         keyup       : une touche du clavier a été relachée.
 
-    Les Evénements WINDOW (Fenêtre)
+    Les Evénements WINDOW  ⚠️ (Fenêtre)
 
         scroll      : défilement de la fenêtre ;
         resize      : redimensionnement de la fenêtre.
 
-    Les Evénemenents FORM (Formulaire) 
+    Les Evénemenents FORM  ⚠️ (Formulaire) 
 
         change      : pour les éléments <input>, <select>, <textarea> ;
         submit      : à l'envoi (soumission) du formulaire ;
-        input       : pour capter la saisie d'un utilisateur sur un champ <input>
+        input       : pour capter la saisie d'un utilisateur sur un champ <input> (± en temps réel)
 
 
 
@@ -35,7 +35,7 @@
 A QUEL MOMENT ILS SONT DECLENCHES pour mettre en place des actions :
 
 ####################### LES ECOUTEURS D'EVENEMENTS ###############################
-                            addEventListener
+                            addEventListener  ⚠️ 
 
     Pour attacher un événenemnt à un élément ou autrement dit,
     pour déclarer un écouteur d'événement qui se chargera de 
@@ -64,7 +64,6 @@ p.addEventListener('click', changerLaCouleurEnRouge);
 
 // -- Création du champ input
 var input = document.createElement('input');
-document.body.appendChild(p);
 
 // -- Attribution d'un Attribut (pas obligé mais bien utile !)
 input.setAttribute('type', 'text');

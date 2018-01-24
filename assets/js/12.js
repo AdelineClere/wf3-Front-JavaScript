@@ -16,11 +16,11 @@
 
 
 /*--------------------------------------------------------------------
-|                document.getElementById
+|            ⚠️     document.getElementById
 |---------------------------------------------------------------------
 |
 | document.getElementById() est une fonction qui va permettre de  
-| récupérer un élélment HTML à partir de son identifiant unique : ID
+| récupérer un élélment HTML à partir de son identifiant unique : ID ⚠️ 
 |
 |---------------------------------------------------------------------*/
 
@@ -29,11 +29,11 @@ console.log(bonjour)
 
 
 /*--------------------------------------------------------------------
-|                document.getElementsByClassName        !!! > On récup un tablaeu > Elt 0 !!!!
+|            ⚠️ s     document.getElementsByClassName        !!! > On récup un tablaeu > Elt 0 !!!!
 |---------------------------------------------------------------------
 |
 | document.getElementByClassName() est une fonction qui va permettre de  
-| récupérer un élément (une liste) HTML à partir de leur classe.
+| récupérer un élément (une liste) HTML à partir de leur classe ⚠️ 
 |
 |---------------------------------------------------------------------*/
 
@@ -45,11 +45,11 @@ console.log(contenu);
 
 
 /*--------------------------------------------------------------------------
-|                document.getElemenstByTagName        !!! > On récup un tablaeu > Elt 0 !!!!
+|             ⚠️ s    document.getElemenstByTagName        !!! > On récup un tablaeu > Elt 0 !!!!
 |----------------------------------------------------------------------------
 |
 | document.getElementByTagName() est une fonction qui va permettre de  
-| récupérer un ou plusieurs élélments HTML à partir de leur * nom de balise *
+| récupérer un ou plusieurs élélments HTML à partir de leur ⚠️  nom de balise ⚠️ 
 |
 |---------------------------------------------------------------------------*/
 

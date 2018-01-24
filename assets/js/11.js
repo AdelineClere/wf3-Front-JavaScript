@@ -22,7 +22,7 @@ function w(f) {
 }
 
 // -- Déclaration de Variable
-// -- EstCeQueLeMailEstDansLeTableau = faux;
+// -- EstCeQueLeMailEstDansLeTableau ⚠️ = faux;
 var isEmailInArray = false;
 
 // -- 1. Demander à l'utilisateur son email
@@ -39,11 +39,10 @@ for(let i = 0 ; i < BaseDeDonnees.length ; i++) {
 
         // -- Je stop la boucle for, j'ai trouvé ce que je cherche...
         break;
-
     }
 }
 
-if(!isEmailInArray) {
+if(!isEmailInArray) {   //  ⚠️ (!....)
     alert('ATTENTION, Email / Mot de Passe incorrect !');
 }
 

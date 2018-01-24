@@ -1,4 +1,4 @@
-// alert('WOW ! Tu es sur ma page');
+alert('WOW ! Tu es sur ma page');
 
 // 2 slash pour faire un commentaire uniligne.
 

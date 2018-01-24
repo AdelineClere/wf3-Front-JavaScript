@@ -8,7 +8,7 @@ function l(e) {
 }
 */
 
-// > New Syntaxe ECMA 6 avec les fonctions fléchées
+// devient > New Syntaxe ECMA 6 avec les fonctions fléchées ⚠️ 
 // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es
 l = e => console.log(e);
 
@@ -23,7 +23,7 @@ l(google);
     // -- B : l'ID de la Balise
     l(google.id);
 
-    // -- C : La Classe dela Balise
+    // -- C : La Classe de la Balise
     l(google.className);
 
     // -- D : Le texte dela Balise
@@ -46,7 +46,7 @@ l(google);
 /**
  * Nous allons utiliser 2 méthodes :
  * 
- * 1. La fonction document.createElement() va permettre de générer
+ * 1. La fonction ⚠️ document.createElement() va permettre de générer
  * un nouvel élément dans le DOM ; que je pourrai modifier par la suite
  * avec les méthodes que nous venons de voir...
  * 

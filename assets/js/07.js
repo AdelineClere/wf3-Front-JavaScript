@@ -18,7 +18,7 @@ var anneeActuelle   = dateObj.getFullYear();
 function Hello() {
 
     // 2a. Je demande à l'utilisateur son prénom
-    let prenom = prompt("Hello! What is your name?","<Saisir votre Prénom>"); //prompt = string
+    let prenom = prompt("Hello! What is your name?","<Saisir votre Prénom>"); //prompt = string ⚠️ ⚠️ ⚠️ 
     console.log(prenom);
     console.log(typeof prenom);
 
