@@ -41,7 +41,6 @@ for(let i = 0 ; i < BaseDeDonnees.length ; i++) {
         break;
 
     }
-
 }
 
 if(!isEmailInArray) {
