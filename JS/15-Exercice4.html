@@ -158,11 +158,14 @@ le titre id "Bienvenue" : Bonjour [Pseudo] : Pseudo étant la saisie en cours de
         });
 
 //--------------------------------------------------------- ETAPE 2 : 
- 
-    // -- Créer une fonction pour lire puis vérifier son age
+
+    // -- Déclarer la Majorité Légale
+    var MajoriteLegaleFR = 18;
+
+    // -- Créer une fonction pour vérifier son age
     age.addEventListener('change', function () {
                
-        if(age.value < 18) {
+        if(age.value <= MajoriteLegaleFR) {
                     ageError.style.display = "block";       // On affiche "ageError"
                     submit.disabled = true;                 // On désactive submit
                 } else {
@@ -172,66 +175,63 @@ le titre id "Bienvenue" : Bonjour [Pseudo] : Pseudo étant la saisie en cours de
             });
          
 
-//--------------------------------------------------------- ETAPE 4a :
+//--------------------------------------------------------- ETAPE 4 :
 
-    // -- J'écoute l'événement submit du formulaire ⚠️⚠️️⚠️️
-    InscriptionForm.addEventListener('submit', function(event) {  // event = addEventList passé en paramètre
-        // Permet de stopper la redirection HTTP du submit                        
-        event.preventDefault(); 
+    // J'écoute l'event et écris la fonction ajouter user 
+    InscriptionForm.addEventListener('click', function() {;
 
-        // -- Créer un Objet membre à ajouter au tableau
-        let membre = {
-            pseudo  : pseudo.value,
-            age     : age.value,
-            email   : email.value,
-            mdp     : mdp.value,
-        };
-        // -- console.log(membre);
-        membres.push(membre);   // pas besoin de récup membres en getElement 
-                                // car c'est un tableau = une variable => dc accesible
-        console.log(membres);
+        //  -- Définir l'élément à ajouter
+        var span = document.createElement('span');
 
-//--------------------------------------------------------- ETAPE 4b :
+        // -- Lui attribuer son contenu
+        span.textContent = "pseudo.value";
 
-        var p = document.createElement('p');    // innerHtml car text ajoute que du txt ! ⚠️️
-        p.innerHTML = "Merci " + pseudo.value + "! <strong>Tu es maintenant inscrit.</strong><br><br><u>Voici la liste de nos membres :</u>";
-        document.body.appendChild(p);
+        // -- Je choisi l'endroit où l'ajouter 
+        membres.appendChild(span);
 
-            // -- Générer la liste des membres
-            var ul = document.createElement('ul');
-            for(let i = 0 ; i < membres.length ; i++) {
-                
-                let li = document.createElement('li');
-                let liste = membres[i].pseudo + " : " + membres[i].age + " ans";
-                li.textContent = liste;
-                ul.appendChild(li);
-            }
-            
-            // -- Affichage dans la page.
-            document.body.appendChild(ul);
+        w(Bienvenue);
 
     });
 
 
 
-// arreter une boucle trop longue : setTimeOut
-// ⚠️️ Attention bouton reste actif des fois
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
-        // -- Je le publie 
-        w('Merci' + ' ' + pseudo.value + ' ' + '! Tu es maintenant inscrit. <br> Voici la liste de nos Membres :');
-        for(let i = 0 ; i < membres.length ; i++) {
-            w('<ul>');
-                w('<li>');
-                    w(membres.pseudo + ' : ' + membres.age);
-                w('</li>');   
-            w('</ul>');
-            }     
-        // Poss. bloquer le lien vers le formulaire com ça mais marche pas tjrs ! (et mettre à la fin !)
-        //return false;  
-    
-    });
+ETAPE 4 : Si toutes les conditions sont validées, l'utilisateur 
+  va pouvoir procéder à son inscription.
+  
+  En cliquant sur le bouton "M'inscrire", vous devrez enclencher 
+  une action permettant :
+  
+      A. L'ajout de l'utilisateur dans le tableau.
+      B. L'affichage pour l'utilisateur sur la page d'un message 
+      de bienvenue, ainsi que la liste des membres inscrit dans une liste non-ordonnée.
+      
+      Ex. Merci Hugo ! Tu es maintenant inscrit.
+      Voici la liste de nos Membres :
+      
+          Hugo : 26ans
+          Rodrigue : 56ans
+          ...
+          
+      NB : Devra bien entendu s'afficher le membre qui vient de s'inscrire.
 */
+
+
 
 
     </script>

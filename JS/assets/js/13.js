@@ -44,12 +44,12 @@ l(google);
 / -----------------------------------------------------------------*/
 
 /**
- * Nous allons utiliser 2 étapes :
+ * Nous allons utiliser 2 méthodes :
  * 
- * La fonction ⚠️ document.createElement() va permettre de générer
+ * 1. La fonction ⚠️ document.createElement() va permettre de générer
  * un nouvel élément dans le DOM ; que je pourrai modifier par la suite
- * avec les méthodes que nous venons de voir... 
- * Puis ⚠️ .appendChild() pour récup
+ * avec les méthodes que nous venons de voir...
+ * 
  * PS : Ce nouvel élément est placé en mémoire...
  */
 
