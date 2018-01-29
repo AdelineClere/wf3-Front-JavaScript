@@ -29,12 +29,13 @@
         // -- Ici, le DOM est entièrement chargé, je peux procéder à mon code JS...
     });
 
+
+    // -- 4 mais pas utiliser ! : fonction fléchée, pour les supers developpeurs et navigateurs récents
     $(() => {
-        // -- fonction fléchée, pour les supers developpeurs et navigateurs récents
         alert('Bienvenue dans le cours jQuery !');
 
         // -- En JS :
-        document.getElementById('TexteEnJQuery').innerHTML = "<strong>Mon texte en JS</strong>";
+      //  document.getElementById('TexteEnJQuery').innerHTML = "<strong>Mon texte en JS</strong>";
 
         // -- JQ
         // -- En jQuery, les sélecteurs sont les mêmes qu'en CSS !!!
