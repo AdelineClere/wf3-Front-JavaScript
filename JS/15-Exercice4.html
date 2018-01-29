@@ -127,7 +127,7 @@ le titre id "Bienvenue" : Bonjour [Pseudo] : Pseudo étant la saisie en cours de
     // ------------------------------------------------------------- ETAPE 1 & 3
 
     // -- J'écoute l'événement
-    pseudo.addEventListener('input', function () {  // 'input' car en 'temps réel' - Fonction ANONYME ici !
+    pseudo.addEventListener('input', function () {  // 'input' car en 'temps réel' - Fonction ANONYME ici !  ⚠️ 
         // console.log(pseudo.value);
         for(let i = 0 ; i < membres.length ; i++) {
             // console.log(membres[i]);  
@@ -159,77 +159,54 @@ le titre id "Bienvenue" : Bonjour [Pseudo] : Pseudo étant la saisie en cours de
 
 //--------------------------------------------------------- ETAPE 2 : 
 
-    // -- Déclarer la Majorité Légale
-    var MajoriteLegaleFR = 18;
-
-    // -- Créer une fonction pour vérifier son age
-    age.addEventListener('change', function () {
-               
-        if(age.value <= MajoriteLegaleFR) {
-                    ageError.style.display = "block";       // On affiche "ageError"
-                    submit.disabled = true;                 // On désactive submit
-                } else {
-                    ageError.style.display = "none";
-                    submit.disabled = false;
-                }
-            });
+        age.addEventListener('change', function() {
+            if(age.value < 18) {
+                ageError.style.display = "block";
+                submit.disabled = true;
+            } else {
+                ageError.style.display = "none";
+                submit.disabled = false;
+            }
+        });
          
 
 //--------------------------------------------------------- ETAPE 4 :
 
-    // J'écoute l'event et écris la fonction ajouter user 
-    InscriptionForm.addEventListener('click', function() {;
+// -- J'écoute l'événement
+InscriptionForm.addEventListener('submit', function(e) {
+    // -- Permet de stopper la redirection HTTP.
+    event.preventDefault();
 
-        //  -- Définir l'élément à ajouter
-        var span = document.createElement('span');
+    // -- Créer un Objet membre à ajouter au tableau
+    let membre = {
+        pseudo  : pseudo.value,
+        age     : age.value,
+        email   : email.value,
+        mdp     : mdp.value
+    };
+    // console.log(membre);
+    membres.push(membre);
+    console.log(membres);
 
-        // -- Lui attribuer son contenu
-        span.textContent = "pseudo.value";
+    var p = document.createElement('p');
+    p.innerHTML = "Merci " + pseudo.value + " ! <strong>Tu es maintenant inscrit.</strong><br><br><u>Voici la liste de nos membres :</u>";
+    document.body.appendChild(p);       // -- ⚠️ 'innerHtml' car textContent n'ajoute que du texte, pas du html !!
 
-        // -- Je choisi l'endroit où l'ajouter 
-        membres.appendChild(span);
+    // -- Générer la liste des membres
+    var ul = document.createElement('ul');
+    
+    for(let i = 0 ; i < membres.length ; i++) {
+        let li = document.createElement('li');
+        
+        let liste = membres[i].pseudo + " : " + membres[i].age + " ans";
+        li.textContent = liste;
+        ul.appendChild(li);
+    }
+    
+    // -- Affichage dans la page.
+    document.body.appendChild(ul);
 
-        w(Bienvenue);
-
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-ETAPE 4 : Si toutes les conditions sont validées, l'utilisateur 
-  va pouvoir procéder à son inscription.
-  
-  En cliquant sur le bouton "M'inscrire", vous devrez enclencher 
-  une action permettant :
-  
-      A. L'ajout de l'utilisateur dans le tableau.
-      B. L'affichage pour l'utilisateur sur la page d'un message 
-      de bienvenue, ainsi que la liste des membres inscrit dans une liste non-ordonnée.
-      
-      Ex. Merci Hugo ! Tu es maintenant inscrit.
-      Voici la liste de nos Membres :
-      
-          Hugo : 26ans
-          Rodrigue : 56ans
-          ...
-          
-      NB : Devra bien entendu s'afficher le membre qui vient de s'inscrire.
-*/
+});
 
 
 

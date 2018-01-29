@@ -1,5 +1,5 @@
 /* ---------------------------------------
-        LES OPERATEURS ARITHMETIQUES
+        LES OPERATEURS ARITHMETIQUES  ⚠️ 
 -----------------------------------------*/
 
 
@@ -51,11 +51,12 @@ console.log("Le Modulo de nb1 et nb2 est égale à : " + resultat);
         LES ECRITURES SIMPLIFIEES
 -----------------------------------------*/
 
-nb = 15;
+nb1 = 15;
 nb1 = nb1 + 5;
+console.log(nb1);
 
-nb += 5; // Ce qui équivaut à écrire nb1 = nb1 + 5;
-
+nb1 += 5; //  ⚠️  Ce qui équivaut à écrire nb1 = nb1 + 5;
+console.log(nb1);
 /**
  * Je peux procéder de la même manière pour tous les autres 
  * opérateurs arithmétiques : " + "; " - "; "* "; " / "; " % ";

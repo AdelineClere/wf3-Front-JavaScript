@@ -38,6 +38,7 @@ var Annuaire = [ listeDePrenoms, listeDeNoms ];
 document.write( Annuaire[0][1] )    // 0=annuaire en position 0 + Rodrigue en 1 
 document.write( ' ' );              // pour faire 1 esp.
 document.write( Annuaire[1][1] );
+document.write( ' ' );
 
 /*----------------------------------------------------------
 |                      EXERICE

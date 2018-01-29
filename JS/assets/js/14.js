@@ -35,7 +35,7 @@
 A QUEL MOMENT ILS SONT DECLENCHES pour mettre en place des actions :
 
 ####################### LES ECOUTEURS D'EVENEMENTS ###############################
-                            addEventListener  ⚠️ 
+                        ⚠️   addEventListener  ⚠️ 
 
     Pour attacher un événenemnt à un élément ou autrement dit,
     pour déclarer un écouteur d'événement qui se chargera de 
@@ -65,7 +65,7 @@ p.addEventListener('click', changerLaCouleurEnRouge);
 // -- Création du champ input
 var input = document.createElement('input');
 
-// -- Attribution d'un Attribut (pas obligé mais bien utile !)
+// -- Attribution d'un Attribut ⚠️ (pas obligé mais bien utile !)
 input.setAttribute('type', 'text');
 input.setAttribute('placeholder', 'Saisissez un Contenu...');
 

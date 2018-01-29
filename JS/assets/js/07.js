@@ -11,7 +11,7 @@
 
 
 // -- 1. Initialisation des variables
-var dateObj         = new Date();
+var dateObj         = new Date(); // ⚠️
 var anneeActuelle   = dateObj.getFullYear();
 
 // -- 2. Création d'une fonction

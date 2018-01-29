@@ -53,7 +53,7 @@ var PremierTrimestre = [
     }
 ];
 
-// -- Les Flemards.js
+// -- Les Flemards.js ⚠️⚠️⚠️
 function l(e) {
     console.log(e);
 }
@@ -74,7 +74,7 @@ for(let i = 0 ; i < PremierTrimestre.length ; i++) {
         w('<li>');
             w(Etudiant.prenom + ' ' + Etudiant.nom);
             w('<ul>');
-                for(let matiere in Etudiant.moyenne) { // -- On déclare matière ici et sa boucle à parcourir
+                for(let matiere in Etudiant.moyenne) { //-- On déclare matière ici et sa boucle à parcourir ⚠️ 'in' ⚠️ 
                     // l(matière);
 
                     NombreDeMatiere++; // --> liste chaque matière à chaque tour

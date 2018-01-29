@@ -33,7 +33,7 @@ function verifierAge(age) {
 }
 
 // -- 3. Je demande a l'utilisateur son age
-var age = parseInt( prompt("Bonjour, Quel age avez-vous ?","<Saisissez votre Age>") );
+var age = parseInt( prompt("Bonjour, Quel age avez-vous ?","<Saisissez votre Age>") );  // ⚠️️ ️
 
 // -- 4. Vérification de l'age de l'utilisateur...
 if(verifierAge(age)) {
@@ -46,19 +46,18 @@ else {
     document.location.href = "http://fr.lmgtfy.com/?q=Majorit%C3%A9+L%C3%A9gale+en+France";
 }
 
-    /* -------------------------------------------------------------\
-    |                  LES OPERATEURS DE COMPARAISON                |
-    |                                                               |
-    |   L'opérateur de comparaison " == " signifie : Egal à         |
-    |   Il permet de vérifier que 2 variables sont identiques.      |
-    |                                                               |
-    |   L'opérateur de comparaison " === " signifique  :            |
-    |   Strictement Egal à. Il va comparer la valeur et le type.    |
-    |                                                               |
-    |   L'opérateur de comparaison " != " : Différent de            |
-    |   L'opérateur de comparaison " !== " : Strictement différent  |
-    |   de.                                                         /
-    | -------------------------------------------------------------*/ 
+    /* -----------------------------------------------------------------\
+    |                  LES OPERATEURS DE COMPARAISON                     |
+    |                                                                    |
+    |   L'opérateur de comparaison " == " ⚠️️ ️signifie : Egal à            |
+    |   Il permet de vérifier que 2 variables sont identiques.            |
+    |                                                                     |
+    |   L'opérateur de comparaison " === " ⚠️️ ️signifique  :               |
+    |   Strictement Egal à. Il va comparer la valeur et le type.          |
+    |                                                                     |
+    |   L'opérateur de comparaison " != " : ⚠️️ ️Différent de               |
+    |   L'opérateur de comparaison " !== " : ⚠️️ ️Strictement différent de. |                                                       /
+    | --------------------------------------------------------------------*/ 
 
 /* -------------------------------
             EXERCICE :
@@ -122,7 +121,7 @@ if(monUtilisateurEstCorrect(emailUser,mdpUser)) {
    /                 ~ LES OPERATEURS LOGIQUES ~                  \
   /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \
     |                                                           |
-    |           ##### L'opérateur ET : && ou AND #####          |
+    |       ##### L'opérateur ET : ⚠️️  && ou AND ⚠️️ #####        |
     |                                                           |
     |   Si la combinaison email user et email correspond, ET    |
     |   la combinaise mdpuser et mdp correspond.                |
@@ -131,7 +130,7 @@ if(monUtilisateurEstCorrect(emailUser,mdpUser)) {
     |   correspondre pour être validée.                        |
     |   Ex. if(emailUser == email && mdpUser == mdp) {...}      |
     |                                                           |
-    |           ##### L'opérateur OU : || ou OR #####           |
+    |        ##### L'opérateur OU : ⚠️️ || ou OR ️⚠️️ ️ #####        |
     |                                                           |
     |   Si la combinaison emailUser et email correspond ET/OU   |
     |   la combinaison mdpUser et mdp correspond.
@@ -140,7 +139,7 @@ if(monUtilisateurEstCorrect(emailUser,mdpUser)) {
     |   doit correspondre pour être validée.                    |
     |   Ex. if(emailUser == email || mdpUser == mdp) {...}      |
     |                                                           |
-    |        ##### L'opérateur " ! " ou encore NOT #####        |
+    |   ##### L'opérateur ⚠️️  " ! " ou encore ⚠️️  NOT #####      |
     |                                                           |
     |   L'Opérateur "!" signifique le CONTRAIRE DE... ou NOT    |
     |                                                           |
