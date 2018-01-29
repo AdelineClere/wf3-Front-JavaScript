@@ -8,7 +8,7 @@ $(function() {
 
     // -- Je souhaite sélectionner toutes les div de ma pg
 
-    // -- Je souhaite sélectionner la balise header de ma page
+    // -- Je souhaite sélectionner la balise nav de ma page
     l($('nav'));
 
     // -- Je souhaite tous les éléments descendants directs (enfants) qui sont dans nav

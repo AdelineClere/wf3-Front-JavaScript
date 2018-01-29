@@ -119,15 +119,93 @@ $(() => {
             `);
         }
 
-       /* Je récupère toutes les coordonnées
-        let nom    =$('#nom').val();
-        let prenom =$('#prenom').val();
-        let email  =$('#email').val();
-        let tel    =$('#tel').val();
-        l($('#nom'));
-        l($('#prenom'));
-        l($('#email'));
-        l($('#tel'));*/
+       
+     
+       
+
+
+        // J'écoute l'événement email + vérif qu'il ne soit pas dans la liste
+        let emailPrésent = $('input .email');
+        console.log(emailPrésent);
+
+        for(let i = 0 ; i < emailPrésent.length ; i++) {
+            if( $(emailPrésent).eq(i).val() = email ) {
+                
+                email.parent().addClass('has-error'); 
+                $('<p class="text-danger">Votre email est déjà présent</p>').appendTo(email.parent());
+                l(email.val)
+            }else {
+                email.parent().addClass('has-success');
+            }
+        }
+
+
+       
+        $(this).replaceWith('<p>Bonjour <strong>' + fullname + message+ "</p>");
+
+
+
+
+/*
+        if(!validateEmail(email.val())) {
+            email.parent().addClass('has-error'); 
+            $('<p class="text-danger">Vérifiez votre adresse email</p>').appendTo(email.parent());
+        } else {
+            email.parent().addClass('has-success');
+        }
+
+
+
+        var emailPresent = [
+            {<div class="form-group">
+                <label for="nom" class="col-md-4 control-label">Nom</label>
+                <div class="col-md-8">
+                    <input type="text" name="nom" id="nom" class="form-control" placeholder="Nom">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="prenom" class="col-md-4 control-label">Prénom</label>
+                <div class="col-md-8">
+                    <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Prénom">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-md-4 control-label">Email</label>
+                <div class="col-md-8">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tel" class="col-md-4 control-label">Tel</label>
+                <div class="col-md-8">
+                    <input type="tel" name="tel" id="tel" class="form-control" placeholder="Téléphone">
+                </div>
+            </div>
+          }]; 
+
+        for(let i = 0 ; i < emailPresent.length ; i++) {
+            // console.log(membres[i]);  
+
+                 /**
+                 * Si la saisie d'un pseudo en cours par mon utilisateur
+                 * correspond à un pseudo dans mon tableau de membres...
+                 * alors ma condition s'applique.
+                 * NB : La condition vérifie la saisie de mon utilisateur
+                 * pour tous les membres du tableau !
+                 */
+  /*               if(email.val === emailPresent[i].email) {   // !! pseudo.value car c'est un input pas un prompt !!
+                 pseudoError.style.display = "block";    // On affiche "pseudoError"    ⚠️ 
+                 submit.disabled = true;                 // On désactive submit         ⚠️ 
+                 Bienvenue.textContent = '';
+                 break;
+             } else {
+                 pseudoError.style.display = "none";
+                 submit.disabled = false;
+                 Bienvenue.textContent = 'Bienvenue ' + pseudo.value + ' !';
+             }
+         }
+
+
 
 
         // Je déclare la variable contact en Tableau pour pouvoir faire une boucle
@@ -143,12 +221,12 @@ $(() => {
         var contact = [];
         contact.push();
         console.log(contact)
-*/
-        jQuery(div).append(<table></table>);
 
+        jQuery(div).append(<table></table>);
+*/
     
         // J'écoute l'événement email + vérif qu'il ne soit pas dans la liste
-        l($('#email', function () {
+ /*       l($('#email', function () {
             l($(email));
         for(let i = 0; i != form-group.length; i++) {
             console.log(form-group[i]);  
@@ -165,6 +243,7 @@ $(() => {
             };
         }));
         
+
 
         // On désactive 'aucuncontact'
         l($('.aucuncontact').display.block);
