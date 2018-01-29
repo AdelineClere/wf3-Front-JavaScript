@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------
-/                  LA MANIPULATION DES CONTENUS 
+/               ⚠️   LA MANIPULATION DES CONTENUS 
 / -----------------------------------------------------------------*/
 
 /*
@@ -31,22 +31,22 @@ l(google);
 
 
     /**
-     * Maintenant, je souhaite modifier le contenu de mon lien !
+     * Maintenant, je souhaite modifier le contenu de mon lien ! ⚠️ 
      * Comme une variable classique je vais simplement venir affecter
-     * une nouvelle valeur à mon "text.content".
+     * une nouvelle valeur à mon "text.content". 
      */
     google.textContent = "Mon lien vers GooOooOgle !";
 
 
 
 /*------------------------------------------------------------------
-/                 AJOUTER UN ELEMENT DANS MA PAGE 
+/               ⚠️   AJOUTER UN ELEMENT DANS MA PAGE 
 / -----------------------------------------------------------------*/
 
 /**
- * Nous allons utiliser 2 méthodes :
+ * Nous allons utiliser 2 étapes :
  * 
- * 1. La fonction ⚠️ document.createElement() va permettre de générer
+ * 1. La fonction ⚠️ document.createElement() ⚠️  va permettre de générer
  * un nouvel élément dans le DOM ; que je pourrai modifier par la suite
  * avec les méthodes que nous venons de voir...
  * 
@@ -89,14 +89,14 @@ a.textContent = "Titre de mon Article";
 // -- Je donne un lien à mon lien
 a.href="#";
 
-// -- Je met mon lien a, dans mon h1
+// -- Je met mon lien a, dans mon h1 ⚠️ 
 h1.appendChild(a);
 
-// -- Je met mon h1 dans la page
+// -- Je met mon h1 dans la page ⚠️ 
 document.body.appendChild(h1);
 
-//  -- Je veux que mon lien soit de couleur rouge
+//  -- Je veux que mon lien soit de couleur rouge ⚠️ 
 a.style.color = "red";
 
- // -- Je veux que mon lien ne soit pas souligné
+ // -- Je veux que mon lien ne soit pas souligné ⚠️ 
  a.style.textDecoration = "none";

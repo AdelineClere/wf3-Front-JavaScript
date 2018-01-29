@@ -30,7 +30,7 @@ console.log(typeof Prenom)
 //  -- Déclaration d'un nombre
 var Age = 40;
 
-//  -- Afficher dans la console
+//  -- Afficher dans la console ⚠️ 
 console.log(Age);
 
 //  -- Connaître son Type
@@ -80,7 +80,7 @@ console.log(typeof unBooleen);
 * des réaffectations ultérieures. Une constante ne peut pas être déclarée
 * à nouveau.
 
-* Généralement, par convention, les constantes sont en majuscules.
+* Généralement, par convention, les constantes sont en majuscules ⚠️ 
 */
 
 const HOST = "localhost";
@@ -110,7 +110,7 @@ console.log(unNombre);
 console.log(typeof unNombre);
 
 /**
-* La fonction parseInt() pour retourner un Entier
+* La fonction parseInt() ⚠️  pour retourner un Entier
 *  à partir de ma chaîne de caractères/
 */
 unNombre = parseInt(unNombre);
@@ -122,14 +122,14 @@ unNombre ="12.55";
 console.log(unNombre);
 console.log(typeof unNombre);
 /**
-* La fonction parseFloat() pour retourner un Décimal
+* La fonction parseFloat() ⚠️  pour retourner un Décimal
 *  à partir de ma chaîne de caractères/
 */
 unNombre = parseFloat(unNombre)
 console.log(unNombre);
 console.log(typeof unNombre);
 
-//  -- Conversion d'un Nombre en string avec toString()
+//  -- Conversion d'un Nombre en string avec toString() ⚠️  
 unNombre = 10;
 var maChaineDeCaractere = unNombre.toString();
 console.log(typeof unNombre);

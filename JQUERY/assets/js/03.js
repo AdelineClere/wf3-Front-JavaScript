@@ -7,8 +7,7 @@ $(function() {
     console.log($('div'));
 
     // -- Je souhaite cacher toutes les div de ma page HTML
-    $('div').hide('slow', function() {
-
+    $('div').hide('super-slow', function() {
         /**
          * Une fois que la méthode hide() est terminé, mon alerte peut
          * s'executer !
@@ -17,16 +16,20 @@ $(function() {
          */
         // alert('Fin du Hide');
 
+        
         $('div').css('background','yellow');
         $('div').css('color','red');
-        $('div').show('slow');
+        $('div').show('super-slow');
 
         $('p').hide(1000).css('color','blue').css('font-size','20px').delay(2000).show(500);
         $('p').hide(1000).css({'color':'green','font-size':'20px'}).delay(2000).show(500);
 
-    });
+    }); 
 
 });
 
 
-    /* Pour slow avoir le fichier jquery.slim (pas slim.min, car besoin animation)*/
+    /* ⚠️ Pour slow avoir le fichier jquery.slim (pas slim.min, car besoin animation) */
+
+
+

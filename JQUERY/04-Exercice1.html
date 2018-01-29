@@ -19,10 +19,49 @@
            au nom saisie dans le formulaire.
 
     Intégration de la librairie jQuery -->
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" 
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
     crossorigin="anonymous"></script>
 
+
+    <script>
+        
+        $(function() {
+        // -- console.log($('form'));
+        
+            // -- Récupérer les éléments
+          //*  console.log($('#nomcomplet'));
+        //*  console.log($('#MonFormulaire'));
+
+            // -- J'écoute l'événement
+            $MonFormulaire.addEventListener('submit', function() {
+            
+                // -- Cacher le formulaire de la page HTML
+            $('#MonFormulaire').submit('slow', function() {
+           
+
+                });
+                
+               
+            });
+    
+        });
+
+
+  /*
+           ⚠️ 
+          
+                // -- J'écoute l'événement
+                $MonFormulaire.addEventListener('submit', function() {
+
+                    // -- Cacher le formulaire
+                    $('#MonFormulaire').hide('slow', function() {
+
+                    // -- Permet de stopper la redirection HTTP.
+                    event.preventDefault();
+*/
+
+            
+    </script>
 </body>
 </html>

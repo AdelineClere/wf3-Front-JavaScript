@@ -37,7 +37,7 @@ for(let i = 0 ; i < BaseDeDonnees.length ; i++) {
         isEmailInArray = true;
         w('Bonjour ' + BaseDeDonnees[i].prenom + ' !');
 
-        // -- Je stop la boucle for, j'ai trouvé ce que je cherche...
+        // -- Je stop la boucle for, j'ai trouvé ce que je cherche... ⚠️ 
         break;
     }
 }

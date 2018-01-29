@@ -1,5 +1,5 @@
 /* --------------------------------------
-            LA CONCATENATION
+            LA CONCATENATION  ⚠️ 
 ---------------------------------------*/
 
 var DebutDePhrase        = "Aujourd'hui ";
