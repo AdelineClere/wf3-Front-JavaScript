@@ -1,7 +1,7 @@
 /**
  * Validate email function with regular expression
  *
- * https://paulund.co.uk/regular-expression-to-validate-email-address
+ * https://paulund.co.uk/regular-expression-to-validate-email-address  ⚠️ 
  * If email isn't valid then return false
  *
  * @param email
@@ -30,21 +30,21 @@ var validateTel = tel => {
     }
 }
 
-// -- Initialisation de jQuery
+// -- Initialisation de jQuery ⚠️ 
 $(() => {
 
-    // -- Ecouter a quel moment est soumis notre formulaire
+    // -- Ecouter a quel moment est soumis notre formulaire ⚠️ 
     // En JS : document.getElementById('contact').addEventListener('submit', MaFonctionAExecuter);
     $('#contact').on('submit', e => {
 
-        // -- Neutraliser la redirection HTML5
+        // -- Neutraliser la redirection HTML5 ⚠️ 
         e.preventDefault();
 
-        // -- Supprimer les différentes erreurs
+        // -- Supprimer les différentes erreurs ⚠️ 
         $('#contact .has-error').removeClass('has-error');
         $('#contact .text-danger').remove();
 
-        // -- Déclarer les variables à vérifier
+        // -- Déclarer les variables à vérifier ⚠️ 
         var nom     = $('#nom');
         var prenom  = $('#prenom');
         var email   = $('#email');
@@ -52,7 +52,7 @@ $(() => {
 
         // -- Vérification de chaque champ
 
-            // -- 1. Vérification du Nom
+            // -- 1. Vérification du Nom    ⚠️ \ : à l'envers pour indiquer de ne pas prendre en compte : ' etc... 
             if(nom.val().length === 0) {
                 nom.parent().addClass('has-error');
                 $('<p class="text-danger">N\'oubliez pas de saisir votre nom</p>').appendTo(nom.parent());
@@ -60,31 +60,30 @@ $(() => {
                 nom.parent().addClass('has-success');
             }
 
-        // -- 2. Vérification du Prénom
-        if(prenom.val().length === 0) {
-            prenom.parent().addClass('has-error');
-            $('<p class="text-danger">N\'oubliez pas de saisir votre prénom</p>').appendTo(prenom.parent());
-        } else {
-            prenom.parent().addClass('has-success');
-        }
+            // -- 2. Vérification du Prénom
+            if(prenom.val().length === 0) {
+                prenom.parent().addClass('has-error');
+                $('<p class="text-danger">N\'oubliez pas de saisir votre prénom</p>').appendTo(prenom.parent());
+            } else {
+                prenom.parent().addClass('has-success');
+            }
 
-        // -- 3. Vérification du Mail
-        if(!validateEmail(email.val())) {
-            email.parent().addClass('has-error');
-            $('<p class="text-danger">Vérifiez votre adresse email</p>')
-                .appendTo(email.parent());
-        } else {
-            email.parent().addClass('has-success');
-        }
+            // -- 3. Vérification du Mail
+            if(!validateEmail(email.val())) {
+                email.parent().addClass('has-error');
+                $('<p class="text-danger">Vérifiez votre adresse email</p>').appendTo(email.parent());
+            } else {
+                email.parent().addClass('has-success');
+            }
 
-        // -- 4. Vérification du Numéro de Téléphone
-        if(!validateTel(tel.val())) {
-            tel.parent().addClass('has-error');
-            $('<p class="text-danger">Vérifiez votre numéro de téléphone</p>')
-                .appendTo(tel.parent());
-        } else {
-            tel.parent().addClass('has-success');
-        }
+            // -- 4. Vérification du Numéro de Téléphone
+            if(!validateTel(tel.val())) {
+                tel.parent().addClass('has-error');
+                $('<p class="text-danger">Vérifiez votre numéro de téléphone</p>')
+                    .appendTo(tel.parent());
+            } else {
+                tel.parent().addClass('has-success');
+            }
         
         // -- Dans le cas d'une boucle de vérification
         // let ChampsAVerifier = $('#contact input:not([type=submit])');

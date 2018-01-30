@@ -32,8 +32,8 @@
         $(function() {
 
             // -- 1. Le $ permet d'engager une requête asynchrone à jQ = une requète AJAX Simple
-            // qd le serveur a récupéré les données jQ retourne la réponse json en appellant 
-            // la fonction .done (le done déclare une fonction...)
+                // qd le serveur a récupéré les données jQ retourne la réponse json en appellant 
+                // la fonction .done (le done déclare une fonction...)
             $.ajax('http://geoip.nekudo.com/api/')
             .done(function(resultat) {
                 console.log(resultat);

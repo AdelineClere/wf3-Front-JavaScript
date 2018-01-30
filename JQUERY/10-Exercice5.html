@@ -60,13 +60,11 @@
     
        1. Définir une structure HTML5 & CSS3 pour afficher des articles.
        
-       2. Afficher une liste d'articles à partir de l'API : 
-           https://jsonplaceholder.typicode.com/posts
+       2. Afficher une liste d'articles à partir de l'API :  https://jsonplaceholder.typicode.com/posts
        
        3. BONUS : Afficher uniquement les 10 premiers articles.
        
-       4. BONUS : Mettre en Place Markjs.io afin de surligner des mots dans 
-          les différents articles à l'aide d'un champ input.
+       4. BONUS : Mettre en Place Markjs.io afin de surligner des mots dans les différents articles à l'aide d'un champ input.
      
     -->
 
@@ -89,69 +87,49 @@
     crossorigin="anonymous"></script>
 
     <!-- Intégration de MarkJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js" 
-    integrity="sha256-1iYR6/Bs+CrdUVeCpCmb4JcYVWvvCUEgpSU7HS5xhsY=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.0/jquery.mark.min.js" integrity="sha256-1iYR6/Bs+CrdUVeCpCmb4JcYVWvvCUEgpSU7HS5xhsY=" crossorigin="anonymous"></script>
     
-
     <script>
-
+        
         // -- En attente de jQuery
         $(function() {
-
-            // -- Je lance requête ajax pour récup articles
-            $.getJSON('https://jsonplaceholder.typicode.com/posts', function(articles) {
-                console.log(articles);
-
- /*           $.ajax('https://jsonplaceholder.typicode.com/posts')
-                .done(function(resultat) {
-                    console.log(resultat);
-*/
-                    // -- 2. On parcours les articles et on les affiche sur la pg
-                    $.each(articles, function(indice, article) {
-
-                        $(`
-                            <section>
-                                <header>
-                                    <h1>${article.body}</h1>
-                                </header>
-                                <article>
-                                    ${article.body}
-                                </article>
-                            </section>
-                        `).appendTo($('main'));
-
-                        if(indice === 5) {
-                            return false;
-                        }
-
-                    }); // end $.each
             
-                }); // end $.getJSON
+            // -- 1. Récupération des Articles.
+            $.getJSON('https://jsonplaceholder.typicode.com/posts', function(articles) {
+                
+                // -- 2. On parcours les articles et on les affiches sur la page.
+                $.each(articles, function(indice, article) {
+
+                    $(`
+                        <section>
+                            <header>
+                                <h1>${article.title}</h1>
+                            </header>
+                            <article>
+                                    ${article.body}
+                            </article>
+                        </section>
+                    `).appendTo($('main'));
+
+                    if(indice === 5) {
+                        return false;
+                    }
+
+                }); // end $.each
+
+            }); // end $.getJSON
 
             // -- MarkJS
             $('#markJS').on('input', function() {
-                        // this = élément ds lequel on est
+
+                let keyword = $(this).val();
+                $('section').unmark().mark(keyword);
 
             });
 
-        }); // end $.jquery
-
-
-
-    // Boucle pour parcourir les d'articles et sélectionner les 10 premiers
- /*    for(let i= 0 ; resultat < 10 ; i++) {
-
-        Afficher ces 10 articles dans balise 'article'
-            $(`
-            <p>
-                ${resultat[i]}
-            </p>                
-            `).appendTo($('main'));  
- */
-
+        }); // end jQuery
 
     </script>
+
 </body>
 </html>
-
-
