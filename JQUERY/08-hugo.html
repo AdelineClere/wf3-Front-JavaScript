@@ -38,11 +38,27 @@
     </style>
     
     <!-- HTML5 Shiv -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js" 
-    integrity="sha256-sqQlcOZwgKkBRRn5WvShSsuopOdq9c3U+StqgPiFhHQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js" integrity="sha256-sqQlcOZwgKkBRRn5WvShSsuopOdq9c3U+StqgPiFhHQ=" crossorigin="anonymous"></script>
     
 </head>
 <body>
+    
+    <!---------------------------------------------------/
+        CONSIGNE : 
+        1. Créer un Formulaire HTML permettant le 
+        remplissage d'une Fiche de Contact : Nom, Prénom,
+        Email et le Téléphone.
+        
+        2. Après vérification des informations, vous
+        ajouterez le nouveau contact dans un tableau de 
+        contacts.
+        
+        3. Vous afficherez ensuite l'ensemble des contacts
+        du tableau sur votre page HTML à la suite de votre
+        formulaire. (Vous utiliserez une <table>)
+        
+        4. BONUS : Utilisation de Notification, Local Storage et Bootstrap.
+    \-------------------------------------------------------->
     
     <main class="container">
         
@@ -56,8 +72,8 @@
         <section class="row">
             
             <!-- Début du Formulaire -->
-            <div class="col-xs-12">
-                <form id="contact" action="traitement.php" class="form-horizontal">
+            <div class="col-sm-6">
+                <form id="contact" class="form-horizontal">
                     <fieldset>
                         
                         <!-- Nom du Formulaire -->
@@ -106,6 +122,30 @@
                 </form>
             </div>
             <!-- Fin du Formulaire -->
+            
+            <!-- Début du Tableau -->
+            <div class="col-sm-6">
+                <div class="alert alert-success alert-contact">
+                    <strong>Félicitation !</strong> Votre contact est ajouté.
+                </div>
+                <table id="LesContacts" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Téléphone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="aucuncontact">
+                            <td colspan="4">Aucun Contact pour le Moment.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Fin du Tableau -->
+            
         </section>
         
     </main>
@@ -119,7 +159,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
     <!-- contact.custom.js -->
-    <script src="assets/js/07.validationform.js"></script>
+    <script src="assets/js/08.hugo.js"></script>
     
 </body>
 </html>
