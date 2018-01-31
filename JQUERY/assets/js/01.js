@@ -31,6 +31,7 @@
 
 
     // -- 4 mais pas utiliser ! : fonction fléchée, pour les supers developpeurs et navigateurs récents
+    // on ne peut plus appler avec 'this' qd on utilise les fct° fléchées
     $(() => {
         alert('Bienvenue dans le cours jQuery !');
 
