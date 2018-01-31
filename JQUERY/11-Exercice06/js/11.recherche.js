@@ -25,20 +25,20 @@ CONSIGNE :
 // -- Initialisation de jQuery
 $(function() {
 
-    // -- Je vais écouter l'évènement change sur le champ input.
+    // -- Je vais écouter l'évènement 'change' sur le champ input ⚠️ 
     // https://lodash.com/docs/4.17.4#debounce
     // https://stackoverflow.com/questions/15927371/what-does-debounce-do
     // https://www.grafikart.fr/tutoriels/javascript/debounce-throttle-642
-    // $('#search').on('change', function(e) {
-    $('#search').on( 'input', _.debounce( function(e) {
+    
+    // $('#search').on('change', function(e) {  ou :
+    $('#search').on( 'input', _.debounce(function(e) {
 
-        // -- Je récupère la valeur saisie par mon utilisateur
+        // -- Je récupère la valeur saisie par mon utilisateur ⚠️ 
         let search  = $('#search').val();
         let regex   = new RegExp(search, 'i');
 
-        // -- Vérification dans la console
+        // -- Vérification dans la console ⚠️ 
         // console.log(search);
-
         $('.resultat').slideUp();
 
         if(search.length > 0) {
@@ -71,14 +71,14 @@ $(function() {
                     
                 // } // endfor
 
-                // -- Je filtre mon tableau de "contacts" pour ne garder que ceux pour lesquel je trouve une correspondance.
+                // -- Je filtre mon tableau de "contacts" pour ne garder que ceux pour lesquel je trouve une correspondance ⚠️
                 let resultat = _.filter(contacts, contact => {
                     return regex.test(contact.username) || regex.test(contact.email)
                         || regex.test(contact.phone) || regex.test(contact.name);
                 });
 
                 // console.log(resultat);
-                // -- Je vide mes résultats avant d'afficher les nouveaux.
+                // -- Je vide mes résultats avant d'afficher les nouveaux  ⚠️
                 // -- De cette façon j'évite d'additionner toutes mes recherches
                 $('.resultat').empty();
 
