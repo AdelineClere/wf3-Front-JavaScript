@@ -1,0 +1,139 @@
+/*---------  Pour ecrans Large ---------*/ 
+
+/* remove marging */
+.rm {
+    margin: 0;
+}
+
+/* remove padding */
+.rp {
+    padding: 0;
+}
+
+/* marging top */
+.mt-40 {
+    margin-top: 40px;
+}
+
+/*---------  FOND MAIN ---------*/ 
+
+body {
+    background: black;
+}
+
+/*--------- NAV ---------*/ 
+
+.navbar {
+    margin-bottom: 0;
+}
+nav {
+    position: absolute;
+}
+nav ul {
+    text-align: center;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+    font-size: 16px;
+    padding-top: 20px;
+}
+.navbar-inverse .navbar-brand:hover {
+    color: gray;
+}
+/*--------- MENU ICONES LIENS ---------*/ 
+
+#menu {
+    padding: 0;
+}
+
+#menu .list-inline {
+    background: #141414;
+    height: 90px;
+}
+#menu ul {
+    text-align: center;
+    padding-top: 15px;
+}
+#menu .icones {
+    width: 50%;
+}
+
+/*--------- SECTION 1 HAUT ---------*/ 
+
+.textIphone h1 {
+    font-size: 30px;
+}
+.textIphone h2 {
+    font-size: 40px;
+}
+
+.textIphone {
+    text-align: center;
+    color: white;   
+}
+
+.IphoneProfil {
+    width: 70%;
+}
+
+/*---------SECTION 2 CENTRE ---------*/ 
+
+.passezAiPhone7 {
+    background: white;
+}
+.visuelIphone7 {
+    width: 50%;
+    padding: 10px 20px 0 0;
+    text-align: right;
+}
+.accrocheIphone7 {
+    text-align: center;
+    padding: 20px 150px 0 0;
+}
+.accrocheIphone7 h2 {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+p {
+    padding-bottom: 15px;
+}
+
+
+/*--------- SECTION FORMULAIRE ---------*/ 
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+#contact .col-md-6 {
+    margin: 0;
+    padding: 0;
+    
+}
+.form-group .form-control {
+    margin: 3px;
+}
+
+#contact .legend {
+    
+}
+
+/*--------- FOOTER ---------*/ 
+
+footer {
+    background: #3d3a3a;
+    padding-top: 20px;
+    height: 40px;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 80%;
+}
+
+
