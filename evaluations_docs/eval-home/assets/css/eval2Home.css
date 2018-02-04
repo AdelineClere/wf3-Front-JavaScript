@@ -1,0 +1,195 @@
+	@import url('https://fonts.google.com/specimen/Merienda');
+
+
+	/* ---------------------
+		INFOS RESPONSIVE
+
+		col-xs	< 768 px		tel				> tout reste en place
+		col-sm	768 < > 992 	tablette		> passe sur 1 col en dessous de 768  (= pt de rupture)
+		col-md	992 < > 1200	ordi classiq	> passe sur 1 col en dessous de 992  (= pt de rupture)
+		col-lg	> 1200 px		Très grd format	> passe sur 1 col en dessous de 1200 (= pt de rupture)
+
+	------------------------ */
+
+
+	/* ---------------------
+		STYLE PAR DEFAUT
+	------------------------ */
+
+	.absolute {
+		position: absolute;
+	}
+
+	h1, h2, h3, h4 {
+		color: #2F4073;
+		font-family: 'Merienda', cursive;
+		font-style: italic;
+	}
+	body {
+		box-sizing: border-box;
+	}
+	
+
+	/* ---------------------
+		NAV
+	------------------------ */
+	h1{
+		color: #FFF;
+		text-align: left;
+		font-size: 20px;
+		padding: 13px 0 0 15px;
+		margin: 0;
+	}
+	
+	.navbar {
+		background: #061339;
+		margin-bottom: 0;
+	}
+
+	body{
+		box-sizing: border-box;
+	}
+
+	/* ---------------------
+		HEADER
+	------------------------ */
+
+	.col-xs-12 {
+		margin: 0;
+		padding: 0;
+	}
+	.container {
+		background-size: cover;
+		background-attachment: fixed;
+		text-align: center;
+		color: #FFF;
+		font-style: italic;
+	}
+
+	h2 {
+		font-size: 44px;
+		color: #FFF;
+		text-shadow: 2px 2px 2px black;
+	}
+
+	#header {
+		background: url(../img/background.jpg) repeat;
+		background-size: fixed;
+		padding: 40px 0;
+	}
+
+	/* ---------------------
+		SECTION PROJECTEUR
+	------------------------ */
+
+	#projecteur {
+		padding: 50px 0;
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+	#formulaire {
+		box-shadow: 0 0 5px rgb(172, 166, 166);
+		border-radius: 5px;
+		padding: 5px;
+		margin-top: 20px;
+	}
+	aside {
+		margin-top: 20px;	
+	}
+	h5 {
+		color: #061339;
+		text-align: left;
+		font-size: 12px;
+		margin: 0;
+		padding: 10px 10px;
+		font-weight: bold;
+		font-style: normal;
+	}
+	#inlineFormCustomSelect {
+		color:gray;
+		margin: 0 0 20px 7px;
+		width: 95%;
+		font-style: normal;
+		font-size: 14px;
+	}
+	#message {
+		margin: auto;
+		width: 85%;
+	}
+	.form-group {
+		font-style: normal;
+	}
+	.btn-primary {
+		background: #1d960a;
+		width: 85%;
+		padding: 3px 0;
+	}
+
+	#myCarousel {
+		
+		margin: 20px 0;
+	}
+	figcaption{
+		position: absolute;
+		padding-bottom: 40px;
+		text-align: center;
+		bottom: 0px;
+	}
+	figure p{
+		color: #FFF;
+		text-shadow: 2px 2px 2px black;
+		font-size: 25px;
+		text-align: center;
+	}
+
+
+	/* ---------------------
+		SECTION NOS CHATS
+	------------------------ */
+	#nosChats {
+		background-color: rgba(0, 0, 0, 0.12);
+		padding: 40px 0 0 0;
+	}
+	h4 {
+		text-align: left;
+		font-style: italic;
+		font-size: 30px;
+		padding-bottom: 10px;
+	}
+	p {
+		text-align: left;
+		color: rgb(82, 78, 78);
+		font-size: 14px;
+		font-style: normal;
+	}
+	.teteChat {
+		background:#7885A5;
+		transition-duration: 1s;
+		width: 100%;
+		margin: auto;
+	}
+	.teteChat:hover {
+		background: #061339;
+	}
+
+	/* ---------------------
+		FOOTER
+	------------------------ */
+
+	footer {
+		padding: 0;
+		margin: 0;
+	}
+
+	footer p {
+		background: #061339;
+		margin: 0;
+		text-align: right;
+		padding: 7px 20px 5px 0;
+		color: #FFF;
+		font-size: 11px;
+	}
+
+	
+
+
+

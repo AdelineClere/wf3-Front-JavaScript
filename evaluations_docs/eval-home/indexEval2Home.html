@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Encodage de la page pour les accents -->
+    <meta charset="UTF-8">
+    
+    <!-- Titre de la page -->
+    <title>Evaluation 2</title>
+    
+    <!-- Pour Internet Explorer : S'assurer qu'il utilise la dernière version du moteur de rendu -->
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    
+    <!-- Affichage sans zoom sur les mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+    <!-- FontAwesome CSS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" sizes="32x32" href="assets/img/fee-favicon-48.png" type="image/png"> <!-- Favicon -->
+
+    <!-- Styles CSS -->
+    <link href="assets/css/eval2Home.css" rel="stylesheet">
+    
+    <!-- HTML 5 Shiv -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+        <!-- NAV -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>OhMyCats !</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>  
+
+        <!-- HEADER -->
+            <section id="header"> 
+                <div class="container"> 
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2>Adoptez un chat trop bon !</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    <main>
+       
+        <!-- Le Projecteur -->
+        <section id="projecteur">            
+            <div class="container">
+                <div class="row">
+                    
+                    <aside class="col-sm-3">
+                        <h3>Les chats à adopter</h3>
+                            
+                            <form id="formulaire" class="form-horizontal">
+        
+                                <!-- Choix chat -->
+                                <h5>Choix du chat</h5>
+                                    <div class="row"></div>
+                                        <div class="col-auto my-1">
+                                            <select class="custom-select col-xs-12" id="inlineFormCustomSelect">
+                                                <option selected>- Sélectionnez -</option>
+                                                <option value="1">Sushi</option>
+                                                <option value="2">Maki</option>
+                                                <option value="3">Sashimi</option>
+                                                <option value="2">Yakitori</option>
+                                                <option value="2">Onigri</option>
+                                            </select>
+                                        </div>
+                                    
+                                        <!-- Message Raison d'adoption -->
+                                        <h5>Raisons d'adoption</h5>
+                                            <div class="form-group">
+                                                <div class="col-xs-12">
+                                                    <textarea id="message" name="message" rows="11" placeholder="Saisissez ici les raisons pour lesquelles vous souhaitez adopter ce chat..." class="form-control"></textarea>           
+                                                </div>
+                                            </div>
+
+                                        <!-- Bouton envoyer -->
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <button type="submit" class="btn btn-primary" name="inscription" value="Je m'inscris">Envoyer</button>
+                                        </div>
+                                    </div>   
+                            </form>
+                    </aside> <!-- fin aside formulaire -->
+        
+                    <div class="carrousel col-sm-9">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                                </ol>
+                                
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <figure>
+                                            <img src="assets/img/chat_1.jpg" alt="Chat 1">
+                                            <figcaption>
+                                                <p>Sushi</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                
+                                    <div class="item">
+                                        <figure>
+                                            <img src="assets/img/chat_2.jpg" alt="Chat 2">
+                                            <figcaption>
+                                                <p>Maki</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                
+                                    <div class="item">
+                                            <figure>
+                                            <img src="assets/img/chat_3.jpg" alt="Chat 3">
+                                            <figcaption>
+                                                <p>Sashimi</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div class="item">
+                                            <figure>
+                                            <img src="assets/img/chat_4.jpg" alt="Chat 4">
+                                            <figcaption>
+                                                <p>Yakitori</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <div class="item">
+                                        <figure>
+                                            <img src="assets/img/chat_5.jpg" alt="Chat 5">
+                                            <figcaption>
+                                                <p>Onigri</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                                
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                        </div> <!-- fin div id myCarrousel -->
+
+                    </div>  <!-- fin div carrousel -->
+
+               </div> <!-- fin div row -->
+
+            </div>  <!-- fin div container -->
+
+        </section> <!-- fin section pojectreur -->
+    
+        
+        <!-- Redactionnel -->
+        <section id="nosChats">            
+            <div class="container">
+                <div class="row">
+                    <article class="col-sm-9">
+                        <h4>Nos chats à adopter...</h4>
+                        <p>Sed quid est quod in hac causa maxime homines admirentur et 
+                            reprehendant meum consilium, cum ego idem antea multa decreverim, 
+                            que magis ad hominis dignitatem quam ad rei publicae necessitatem pertinerent? 
+                            Supplicationem quindecim dierum decrevi sententia mea. Rei publicae satis erat 
+                            tot dierum quot C. Mario ; dis immortalibus non erat exigua eadem gratulatio 
+                            quae ex maximis bellis. <br>
+                            <br>
+                            Ergo ille cumulus dierum hominis est dignitati tributus.
+                            Haec igitur prima lex amicitiae sanciatur, ut ab amicis honesta petamus, 
+                            amicorum causa honesta faciamus, ne exspectemus quidem, dum rogemur; 
+                            studium semper adsit, cunctatio absit; consilium vero dare audeamus libere. 
+                            Plurimum in amicitia amicorum bene suadentium valeat auctoritas, eaque et 
+                            adhibeatur ad monendum non modo aperte sed etiam acriter, si res postulabit, 
+                            et adhibitae pareatur.</p>
+                    </article>
+                    <aside class="col-sm-3">
+                       <img class="teteChat" src="assets/img/tete-chat.png" alt="chat">
+                    </aside>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <!-- Pied de Page -->
+        <footer>
+            <p><i class="far fa-copyright"></i> OhMyCats </p>
+        </footer>
+        
+    </main>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- Mon Fichier JS -->
+    <script src="assets/js/eval2Home.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

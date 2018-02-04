@@ -1,0 +1,119 @@
+    @import url('https://fonts.google.com/specimen/Merienda');  /* font goog choisie */
+
+
+	/* ---------------------
+		INFOS RESPONSIVE
+
+		col-xs	< 768 px		tel				> tout reste en place
+		col-sm	768 < > 992 	tablette		> passe sur 1 col en dessous de 768  (= pt de rupture)
+		col-md	992 < > 1200	ordi classiq	> passe sur 1 col en dessous de 992  (= pt de rupture)
+		col-lg	> 1200 px		Très grd format	> passe sur 1 col en dessous de 1200 (= pt de rupture)
+
+    ------------------------ */
+    
+    /*==========  Pour les Ecrans Large ==========*/ 
+
+    /* remove marging */
+    .rm {
+        margin: 0 !important;
+    }
+
+    /* remove padding */
+    .rp {
+        padding: 0 !important;
+    }
+
+    /* marging top */
+    .mt-40 {
+        margin-top: 40px;
+    }
+
+
+	/* ------------------------
+		STYLE PAR DEFAUT (ex)
+	------------------------- */
+
+	.absolute {
+		position: absolute;
+	}
+
+	h1, h2, h3, h4 {
+		color: #2F4073;
+		font-family: 'Merienda', cursive;
+	}
+	body {
+        box-sizing: border-box;
+        background: #000;
+	}
+	html {
+		font-size: 62.5%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	/* à la fin, ex */
+	/*==========  Non-Mobile First Method  ==========*/
+
+		/* Large Devices, Wide Screens */
+		@media only screen and (max-width : 1200px) {
+			
+			.navbar-apple ul li,
+			.navbar-apple .navbar-brand {
+				margin-right: 3rem;
+			}
+			
+		}
+
+		/* Medium Devices, Desktops */
+		@media only screen and (max-width : 992px) {
+			
+			.navbar-apple ul li,
+			.navbar-apple .navbar-brand {
+				margin-right: 1rem;
+			}
+			
+			#mobile ul li {
+				width: calc(100% / 4);
+			}
+		}
+
+		/* Small Devices, Tablets */
+		@media only screen and (max-width : 768px) {
+			
+			#mobile ul li {
+				width: calc(100% / 3);
+			}
+			
+			#iPhone7 {
+				padding: 40px 0;
+			}
+			
+			#iPhone7 img {
+				margin: 0 auto;
+			}
+			
+			#email {
+				margin-bottom: 15px;
+			}
+			
+		}
+
+		/* Extra Small Devices, Phones */ 
+		@media only screen and (max-width : 480px) {
+			#mobile ul li {
+				width: calc(100% / 2);
+			}
+		}
+
+		/* Custom, iPhone Retina */ 
+		@media only screen and (max-width : 320px) {
+			
+		}
