@@ -1,86 +1,91 @@
 /**
- * Pour déclarer une class comme composant de notre application,
- * on importe "Component" via @Angular/core
- * (une variable créée ds AppComponent n'existe que dedans AppComp.)
+ * Pour déclarer une classe comme composant de
+ * notre application, on importe "Component"
+ * via @angular/core
  */
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Contact } from './shared/models/contact';
-
+import {UserApiService} from './shared/services/user-api.service';
 
 /**
- * @component est ce qu'on appelle un décorateur.
+ * @Component est ce qu'on appelle un décorateur.
  * Il va nous permettre de définir 3 paramètres
  * essentiels à notre application...
- * (Il précise quels fichiers html et css sera appliqué)
  */
 @Component({
-  /** Le sélector détermine la manière dont
+  /**
+   * Le sélecteur (selector) détermine la manière donr
    * le composant sera affiché dans votre HTML.
-   * On écrira dans notre html : <app-root></app-root>
-   * vous devez avoir obligatoirement la balise d'ouverture
+   * On écrira dans notre HTML : <app-root></app-root>
+   * vous devez OBLIGATOIREMENT avoir la balise d'ouverture
    * et de fermeture.
    */
   selector: 'app-root',
   /**
-   * "templateUrl" ou "template" est la partie visible du composant.
-   * C'est ce qui s'affiche à l'écran lorsque le composant est utilisé.
-   * (= on a déclaré l'import et on lui dit voici les fichiers html
-   * et css qui sont liés, au fichier class dessous)
+   * "templateUrl" ou "template" est la partie visible
+   * du composant. C'est ce qui s'affiche à l'écran
+   * lorsque le composant est utilisé.
    */
   templateUrl: './app.component.html',
   // template: `
-  //  <h1>Hello Truc !</h1>
-  // `
+  //   <h1>Hello Arnaud !</h1>
+  // `,
   /**
-   * La déclaration des styles avec "stylesUrls" ou "styles"
+   * La déclaration des styles avec "styleUrls" ou "styles"
    */
   styleUrls: ['./app.component.css']
 })
 /**
- * La classe contient les données du compsant mais aussi
- * son comportement. Dans le context MV VM, notre classe
+ * La classe contient les données du composant, mais aussi
+ * son comportement. Dans le contexte MV VM, notre classe
  * correspond au ViewModel.
  */
-  export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private userApiService: UserApiService) {}
 
-  // -- Déclaration d'une variable titre
+  // -- Déclaration d'une Variable Titre
   title: string = 'Gestion de mes Contacts';
 
   // -- Contact choisi par mon utilisateur.
   contactActif: Contact;
 
-
-
-  // -- Déclaration d'un objet Contact
+  // -- Déclaration d'un Object Contact
   unContact: Contact = {
-      id        : 1,
-      name      : 'Adeline CLERE',
-      username  : 'adelineclere',
-      email     : 'wf3@hl-media.fr'
-   };
-
-
+    id        : 1,
+    name      : 'Hugo LIEGEARD',
+    username  : 'hugoliegeard',
+    email     : 'wf3@hl-media.fr'
+  };
 
   mesContacts: Contact[] = [
     {
       id        : 1,
-      name      : 'Arnaud VALETTE',
-      username  : 'adelineclere',
-      email     : 'a.valette@hl-media.fr'
-    }
+      name      : 'Hugo LIEGEARD',
+      username  : 'hugoliegeard',
+      email     : 'wf3@hl-media.fr'
+    },
     {
       id        : 2,
-      name      : 'Jonathan CHEMLA',
-      username  : 'jonathanchemal',
-      email     : 'j.chemla@hl-media.fr'
-    }
+      name      : 'Arnaud VALLETTE',
+      username  : 'arnaudvallette',
+      email     : 'a.vallette@hl-media.fr'
+    },
     {
       id        : 3,
-        name    : 'Adeline CLERE',
-      username  : 'adelineclere',
-      email     : 'wf3@hl-media.fr'
+      name      : 'Jonathan CHEMLA',
+      username  : 'jonathanchemla',
+      email     : 'j.chemla@hl-media.fr'
     }
   ];
+
+  ngOnInit(): void {
+    this.userApiService.getContacts().subscribe(
+      contacts => {
+        // console.log(contacts);
+        this.mesContacts = contacts;
+      }
+    );
+  }
 
   /**
    * Ma fonction choisir contact, prend un contact
@@ -92,12 +97,11 @@ import { Contact } from './shared/models/contact';
     console.log(this.contactActif);
   }
 
+  ajouterContactDansListe(event) {
+    const leContact: Contact = event.leContact;
+    let id: number = this.mesContacts.length;
+    leContact.id = id += 1;
+    this.mesContacts.push(leContact);
+  }
 
 }
-
-
-
-
-/**
-* Dans Angular double {{ pour afficher variable ex : Welcome to {{ title }}!
- **/
