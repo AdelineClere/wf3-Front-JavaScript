@@ -14,7 +14,7 @@ import {UserApiService} from './shared/services/user-api.service';
  */
 @Component({
   /**
-   * Le sélecteur (selector) détermine la manière donr
+   * Le sélecteur (selector) détermine la manière dont
    * le composant sera affiché dans votre HTML.
    * On écrira dans notre HTML : <app-root></app-root>
    * vous devez OBLIGATOIREMENT avoir la balise d'ouverture
