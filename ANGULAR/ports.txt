@@ -1,5 +1,16 @@
 Contact		4201
 TodoListApp	4202
+Contact2		4203
 
 Formateur 
 ContactApp	4210
+
+
+Sommaire ContactApp
+
+1. Début Angular
+2. Suite 
+3. Mise en place de la récup des contacts avec l'API avec HTTPClient
+4. Sauvegarde localStorage
+5. Todo List App Init
+6. Application TodoListApp
