@@ -18,6 +18,7 @@ import { Contact } from './shared/models/contact';
    * On écrira dans notre HTML : <app-root></app-root>
    * vous devez OBLIGATOIREMENT avoir la balise d'ouverture
    * et de fermeture.
+   * 'app-root' = ce qui fait le lien ac index.html
    */
   selector: 'app-root',
   /**
@@ -47,14 +48,15 @@ export class AppComponent {
   // -- Contact choisi par mon utilisateur.
   contactActif: Contact;
 
-  // -- Déclaration d'un Object Contact
+  // -- Déclaration d'un Object Contact (même class que Contact)
   unContact: Contact = {
     id        : 1,
     name      : 'Hugo LIEGEARD',
     username  : 'hugoliegeard',
     email     : 'wf3@hl-media.fr'
   };
-
+  
+  // -- Un tableau d'objet de structure 'Contact'
   mesContacts: Contact[] = [
     {
       id        : 1,

@@ -8,3 +8,5 @@ export class Contact {
   website?  : string;
   company?  : object;
 }
+
+/* class Contact = permet de connaître la structure d'un objet */
