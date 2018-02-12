@@ -45,6 +45,7 @@
 		background: #061339;
 		margin-bottom: 0;
 		position: fixed;
+		width: 100%;
 	}
 
 	body{
@@ -71,12 +72,13 @@
 		font-size: 44px;
 		color: #FFF;
 		text-shadow: 2px 2px 2px black;
+		padding-top: 40px;
 	}
 
 	#header {
 		background: url(../img/background.jpg) repeat;
 		background-size: fixed;
-		padding: 40px 0;
+		padding: 50px 0;
 	}
 
 	/* ---------------------
@@ -165,7 +167,7 @@
 	.teteChat {
 		background:#7885A5;
 		transition-duration: 1s;
-		width: 100%;
+		max-width: 100%;
 		margin: auto;
 	}
 	.teteChat:hover {
